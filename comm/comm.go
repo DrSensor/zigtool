@@ -88,7 +88,6 @@ func Build(buildName string) {
 	cmd := exec.Command("zig", args...)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	fmt.Printf("zig cmd:%s\r\n", strings.Join(cmd.Args, " "))
 	cmd.Start()
 	cmd.Wait()
 }
